@@ -109,6 +109,7 @@
         macro_cb_quot: macro_0 {
             compatible = "zmk,behavior-macro";
             label = "Insert Clipboard in Quotes";
+            #binding-cells = <0>;
             bindings = <
                 &kp QUOT        // escribe "
                // &kp LC(V)       // pega con Ctrl+V
