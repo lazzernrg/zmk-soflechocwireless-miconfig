@@ -112,7 +112,7 @@
             #binding-cells = <0>;
             bindings = <
                 &kp QUOT        // escribe "
-               // &kp LC(V)       // pega con Ctrl+V
+                &kp LC(V)       // pega con Ctrl+V
                 &kp QUOT        // escribe otra "
             >;
         };
