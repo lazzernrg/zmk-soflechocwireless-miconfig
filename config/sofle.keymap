@@ -111,7 +111,7 @@
             label = "Insert Clipboard in Quotes";
             bindings = <
                 &kp QUOT        // escribe "
-               # &kp LC(V)       // pega con Ctrl+V
+               // &kp LC(V)       // pega con Ctrl+V
                 &kp QUOT        // escribe otra "
             >;
         };
