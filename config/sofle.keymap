@@ -111,10 +111,9 @@
             label = "Insert Clipboard in Quotes";
             #binding-cells = <0>;
             bindings = <
+                &macro_tap
                 &kp DQT         // escribe "
-                &wait-ms 50     // espera 50ms 
                 &kp LC(V)       // pega con Ctrl+V
-                &wait-ms 50     // espera 50ms
                 &kp DQT         // escribe otra "
             >;
         };
