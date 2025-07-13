@@ -110,10 +110,11 @@
             compatible = "zmk,behavior-macro";
             label = "Insert Clipboard in Quotes";
             #binding-cells = <0>;
-            wait-ms = <30>;     // esperamos 30ms entre cada pulsación de tecla
             bindings = <
                 &kp DQT         // escribe "
+                &wait-ms 50     // espera 50ms 
                 &kp LC(V)       // pega con Ctrl+V
+                &wait-ms 50     // espera 50ms
                 &kp DQT         // escribe otra "
             >;
         };
