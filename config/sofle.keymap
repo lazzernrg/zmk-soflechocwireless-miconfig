@@ -109,8 +109,8 @@
         macro_cb_quot: macro_0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <20>;
+            wait-ms = <50>;
+            tap-ms = <50>;
             bindings = 
               <&kp DQT>                       /* escribe " */
             , <&macro_press   &kp LCTRL>      /* presiona Ctrl */
