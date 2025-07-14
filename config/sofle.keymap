@@ -113,12 +113,13 @@
             tap-ms = <50>;    // Tiempo para la pulsación de cada tecla
             bindings = 
               <&kp DQT>                       /* Escribe la primera comilla doble (") */
+            , <&macro_wait-ms 50>             /* Añadimos espera antes de la siguiente pulsación */
             , <&macro_press &kp LCTRL>        /* Presiona Ctrl */
-            , <&wait-ms 50>                   /* Añadimos espera antes de pegar */
+            , <&macro_wait-ms 50>             /* Añadimos espera antes de pegar */
             , <&macro_tap &kp V>              /* Presiona V para pegar */
-            , <&wait-ms 50>                   /* Añadimos otra espera para asegurarnos de que V se ha enviado */
+            , <&macro_wait-ms 50>             /* Añadimos otra espera para asegurarnos de que V se ha enviado */
             , <&macro_release &kp LCTRL>      /* Suelta Ctrl */
-            , <&wait-ms 50>                   /* Añadimos otra espera después de soltar Ctrl */
+            , <&macro_wait-ms 50>             /* Añadimos otra espera después de soltar Ctrl */
             , <&kp DQT>                       /* Escribe la segunda comilla doble (") */
             ;
         };
