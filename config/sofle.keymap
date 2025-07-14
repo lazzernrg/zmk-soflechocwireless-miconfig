@@ -109,14 +109,17 @@
         macro_cb_quot: macro_0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <50>;
-            tap-ms = <50>;
+            wait-ms = <100>;  // Aumentamos el tiempo de espera al principio
+            tap-ms = <50>;    // Tiempo para la pulsación de cada tecla
             bindings = 
-              <&kp DQT>                       /* escribe " */
-            , <&macro_press   &kp LCTRL>      /* presiona Ctrl */
-            , <&macro_tap     &kp V>          /* pulsa V */
-            , <&macro_release &kp LCTRL>      /* suelta Ctrl */
-            , <&kp DQT>                       /* escribe " */
+              <&kp DQT>                       /* Escribe la primera comilla doble (") */
+            , <&macro_press &kp LCTRL>        /* Presiona Ctrl */
+            , <&wait-ms 50>                   /* Añadimos espera antes de pegar */
+            , <&macro_tap &kp V>              /* Presiona V para pegar */
+            , <&wait-ms 50>                   /* Añadimos otra espera para asegurarnos de que V se ha enviado */
+            , <&macro_release &kp LCTRL>      /* Suelta Ctrl */
+            , <&wait-ms 50>                   /* Añadimos otra espera después de soltar Ctrl */
+            , <&kp DQT>                       /* Escribe la segunda comilla doble (") */
             ;
         };
     };
