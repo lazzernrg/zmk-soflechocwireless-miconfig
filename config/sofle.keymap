@@ -108,12 +108,16 @@
     macros {
         macro_cb_quot: macro_0 {
             compatible = "zmk,behavior-macro";
-            label = "Insert Clipboard in Quotes";
             #binding-cells = <0>;
-            bindings 
-                = <&macro_tap_time 50>
-                , < &kp DQT &kp LC(V) &kp DQT>
-                ;
+            wait-ms = <20>;
+            tap-ms = <20>;
+            bindings = 
+              <&kp DQT>                       /* escribe " */
+            , <&macro_press   &kp LCTRL>      /* presiona Ctrl */
+            , <&macro_tap     &kp V>          /* pulsa V */
+            , <&macro_release &kp LCTRL>      /* suelta Ctrl */
+            , <&kp DQT>                       /* escribe " */
+            ;
         };
     };
 
